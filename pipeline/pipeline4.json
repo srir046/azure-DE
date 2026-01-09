@@ -1,0 +1,33 @@
+{
+	"name": "pipeline4",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://prod-27.northcentralus.logic.azure.com:443/workflows/ab0d0d87494944f3a72ae5c1f06b2a7d/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=pOUiYGDYRWApt6dXhBw6g7EctjwyM-lVFKQS_SxVzvo",
+					"body": {
+						"toEmailId": "kovvurisriram@gmail.com",
+						"pipelinename": "Pipeline1",
+						"Status": "Success",
+						"Message": "File has been transferred"
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-12-29T07:42:24Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

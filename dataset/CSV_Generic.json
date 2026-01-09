@@ -1,0 +1,32 @@
+{
+	"name": "CSV_Generic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_LS_PIPELINE",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"folderNamePath": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().folderNamePath",
+					"type": "Expression"
+				},
+				"fileSystem": "landing"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

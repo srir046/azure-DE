@@ -1,0 +1,19 @@
+{
+	"name": "jsonFormatting",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blobConnection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "landing"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

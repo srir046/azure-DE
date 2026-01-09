@@ -1,0 +1,29 @@
+{
+	"name": "testParamDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase3",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tableNameParam": {
+				"type": "string"
+			},
+			"schemaNameParam": {
+				"type": "string",
+				"defaultValue": "salesLT"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "salesLT",
+			"table": {
+				"value": "@dataset().tableNameParam",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

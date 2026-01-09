@@ -1,0 +1,31 @@
+{
+	"name": "parameteriedGenericDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlDatabaseLinkService",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"schemaNameParam": {
+				"type": "string"
+			},
+			"tableNameParam": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().schemaNameParam",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().tableNameParam",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

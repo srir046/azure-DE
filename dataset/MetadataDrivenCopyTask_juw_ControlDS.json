@@ -1,0 +1,19 @@
+{
+	"name": "MetadataDrivenCopyTask_juw_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlDatabaseLinkService",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_juw_20251223"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"table": "MainControlTable_practice"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
